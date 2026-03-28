@@ -3,6 +3,7 @@ import { BookOpen, Brain, BatteryCharging, ShieldCheck, CheckCircle2, ArrowRight
 import { Link } from 'react-router-dom';
 import WebGLBackground from './components/WebGLBackground';
 import { motion, AnimatePresence } from 'framer-motion';
+import SEO from './components/SEO';
 
 export default function LandingPage() {
   const [termsAccepted, setTermsAccepted] = useState(false);
@@ -39,6 +40,8 @@ export default function LandingPage() {
   };
 
   return (
+    <>
+      <SEO description="A practical, 48-hour protocol to reset your dopamine baseline and architect deep joy in the digital age. Get instant access today." />
     <div className="min-h-screen w-full overflow-y-auto overflow-x-hidden bg-nexus-bg text-gray-200 font-sans relative selection:bg-nexus-accent/30 selection:text-nexus-accent">
       <WebGLBackground />
       
@@ -396,5 +399,6 @@ export default function LandingPage() {
 
       </div>
     </div>
+    </>
   );
 }

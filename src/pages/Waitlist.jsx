@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Mail, Bell, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import WebGLBackground from '../components/WebGLBackground';
+import SEO from '../components/SEO';
 
 export default function Waitlist() {
   const [email, setEmail] = useState('');
@@ -31,6 +32,8 @@ export default function Waitlist() {
   };
 
   return (
+    <>
+      <SEO title="Join the Waitlist" url="/waitlist" description="Join the Joy Protocol waitlist and be first to access the 48-hour dopamine reset protocol." />
     <div className="min-h-screen flex items-center justify-center p-6 bg-nexus-bg text-gray-200 font-sans relative">
       <WebGLBackground />
       <div className="absolute inset-0 bg-nexus-bg/80 backdrop-blur-sm z-0"></div>
@@ -98,5 +101,6 @@ export default function Waitlist() {
         )}
       </motion.div>
     </div>
+    </>
   );
 }

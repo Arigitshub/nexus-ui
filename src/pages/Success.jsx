@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle2, Download, ArrowRight, Star, PlayCircle } from 'lucide-react';
 import { useSearchParams, Link } from 'react-router-dom';
 import WebGLBackground from '../components/WebGLBackground';
+import SEO from '../components/SEO';
 
 export default function Success() {
   const [searchParams] = useSearchParams();
@@ -44,6 +45,8 @@ export default function Success() {
   }, [sessionId]);
 
   return (
+    <>
+      <SEO title="Purchase Complete" url="/success" noIndex={true} />
     <div className="min-h-screen flex items-center justify-center p-6 bg-nexus-bg text-gray-200 font-sans relative">
       <WebGLBackground />
       <div className="absolute inset-0 bg-nexus-bg/80 backdrop-blur-sm z-0"></div>
@@ -158,5 +161,6 @@ export default function Success() {
         )}
       </motion.div>
     </div>
+    </>
   );
 }

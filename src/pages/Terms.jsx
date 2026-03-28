@@ -1,9 +1,12 @@
 import React from 'react';
 import { ShieldAlert, ArrowLeft } from 'lucide-react';
+import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 
 export default function Terms() {
   return (
+    <>
+      <SEO title="Terms of Service" url="/terms" noIndex={true} />
     <div className="min-h-screen w-full overflow-y-auto bg-nexus-bg text-gray-200 font-sans p-8 lg:p-16">
       <div className="max-w-4xl mx-auto glass-panel p-10 relative">
         <Link to="/" className="inline-flex items-center gap-2 text-nexus-accent hover:text-white transition-colors mb-8">
@@ -53,5 +56,6 @@ export default function Terms() {
         </div>
       </div>
     </div>
+    </>
   );
 }
