@@ -61,10 +61,22 @@ export default function Success() {
             <motion.div 
               animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
-              className="w-16 h-16 rounded-full border-t-4 border-r-4 border-nexus-accent mb-6"
+              className="w-20 h-20 rounded-full border-t-4 border-r-4 border-nexus-accent mb-8 shadow-[0_0_20px_rgba(0,255,204,0.3)]"
             />
-            <h2 className="text-xl font-bold text-white">Verifying Secure Payment...</h2>
-            <p className="text-gray-400 mt-2">Connecting to Stripe.</p>
+            <h2 className="text-2xl font-black text-white uppercase tracking-widest mb-4">Payment Verified.</h2>
+            <div className="w-full bg-white/5 h-2 rounded-full overflow-hidden mb-6 border border-white/10 max-w-sm">
+              <motion.div 
+                initial={{ width: "0%" }}
+                animate={{ width: "95%" }}
+                transition={{ duration: 45, ease: "linear" }}
+                className="h-full bg-gradient-to-r from-nexus-accent to-blue-400"
+              />
+            </div>
+            <p className="text-nexus-accent font-bold animate-pulse mb-2">Generating Secure Access Keys...</p>
+            <p className="text-gray-400 text-sm max-w-xs mx-auto leading-relaxed">
+              Please do not close or refresh this page.<br/>
+              (Estimated time: 50 seconds)
+            </p>
           </div>
         ) : verified ? (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
